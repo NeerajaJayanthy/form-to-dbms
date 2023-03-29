@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriber Form Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Subscribe</h2>
+        <form autocomplete="off" method="post" action="https://script.google.com/macros/s/AKfycby16RtNU8pkhyvGSJM2so6_L3qGUYuI-C8dJ9D4gTV48CXZ52l0kW3RjZqX8MIwOWcE/exec" name="google-sheet">
+          <div class="user-box">
+            <input type="text" name="fullname" required >
+            <label>Full Name</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="emailid" required >
+            <label>Email Id</label>
+          </div>
+          <button type="submit" title="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </button>
+          <!--<input type="submit" value="submit">-->
+        </form>
+      </div>
+
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    >
+    </script>
+    <script>
+      //const scriptURL = 'https://script.google.com/macros/s/AKfycby16RtNU8pkhyvGSJM2so6_L3qGUYuI-C8dJ9D4gTV48CXZ52l0kW3RjZqX8MIwOWcE/exec'
+      const form = document.forms['Sheet1']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+</body>
+</html>
