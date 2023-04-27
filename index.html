@@ -10,7 +10,7 @@
 
 <body>
     <div class="login-box">
-        <h2>Subscribe</h2>
+        <h2>Event Name</h2>
         <form autocomplete="off" method="post" action="https://script.google.com/macros/s/AKfycby16RtNU8pkhyvGSJM2so6_L3qGUYuI-C8dJ9D4gTV48CXZ52l0kW3RjZqX8MIwOWcE/exec" name="google-sheet">
           <div class="user-box">
             <input type="text" name="fullname" required >
@@ -20,6 +20,31 @@
             <input type="email" name="emailid" required >
             <label>Email Id</label>
           </div>
+          <div class="user-box">
+            <input type="text" name="phoneno" required >
+            <label>Phone Number</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="dept" required >
+            <label>Department</label>
+          </div>
+          <div class="user-box">
+            <label for="sem">Semester:</label>
+<div class="drop">
+<select name="sem" id="sem">
+  <option value="s2">s2</option>
+  <option value="s4">s4</option>
+  <option value="s6">s6</option>
+  <option value="s8">s8</option>
+</select></div>
+          </div>
+
+          <div class="user-box">
+            <input type="text" name="college" required >
+            <label>College</label>
+          </div>
+
+
           <button type="submit" title="submit">
             <span></span>
             <span></span>
